@@ -18,7 +18,11 @@ eureka:
     # 单节点无所谓，集群必须设置为true才能配合ribbon使用负载均衡
     fetch-registry: true
     service-url:
-      defaultZone: http://localhost:7001/eureka
+      # 单机 defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7001.com:7001/eureka, http://eureka7002.com:7002/eureka, http://eureka7003.com:7003/eureka
+  instance:
+    instance-id: payment8001 # 主机名称
+    prefer-ip-address: true # 访问路径可以显示IP地址
 
 mybatis:
   mapperLocations: classpath:mapper/*.xml
