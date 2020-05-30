@@ -15,3 +15,6 @@ eureka:
       # 单机 defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
       ## 多个服务以逗号隔开
       defaultZone: http://eureka7002.com:7002/eureka/, http://eureka7003.com:7003/eureka/
+  server:
+    enable-self-preservation: true # 关闭自我保护机制
+    # eviction--timer-in-ms: 2000 # 删除服务的等待时间

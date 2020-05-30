@@ -43,4 +43,15 @@ public class PaymentController {
             return new CommonResult<>(444, "查询失败，查询ID：" + id + "serverPort=" + serverPort, null);
         }
     }
+    @GetMapping(value = "/payment/feign/timeout")
+    public String paymentFeignTimeout() {
+        log.info("paymentFeignTimeout");
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return serverPort;
+    }
+
 }
