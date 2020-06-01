@@ -19,7 +19,7 @@ public class PaymentServiceImpl implements PaymentService {
     @HystrixCommand(fallbackMethod = "paymentInfo_TimeoutHandler", commandProperties = {
             @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "3000")})
     public String paymentInfo_Timeout(Integer id) {
-        Long millis = 5000L;
+        Long millis = 2000L;
         try {
             Thread.sleep(millis);
         } catch (InterruptedException e) {

@@ -43,6 +43,12 @@ public class PaymentController {
             return new CommonResult<>(444, "查询失败，查询ID：" + id + "serverPort=" + serverPort, null);
         }
     }
+
+    @GetMapping(value = "/payment/lb")
+    private String getPaymentLB() {
+        return serverPort;
+    }
+
     @GetMapping(value = "/payment/feign/timeout")
     public String paymentFeignTimeout() {
         log.info("paymentFeignTimeout");
@@ -53,5 +59,4 @@ public class PaymentController {
         }
         return serverPort;
     }
-
 }

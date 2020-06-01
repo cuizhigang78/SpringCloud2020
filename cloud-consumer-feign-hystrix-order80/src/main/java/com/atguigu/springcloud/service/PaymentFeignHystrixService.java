@@ -2,6 +2,7 @@ package com.atguigu.springcloud.service;
 
 import com.atguigu.springcloud.entities.CommonResult;
 import com.atguigu.springcloud.entities.Payment;
+import com.atguigu.springcloud.service.impl.PaymentFeignHystrixFallbackServiceImpl;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,7 +14,8 @@ import org.springframework.web.bind.annotation.RequestBody;
  * create by 携山超 on 2020/5/30
  */
 @Component
-@FeignClient(value = "CLOUD-PROVIDER-HYSTRIX-PAYMENT")
+@FeignClient(value = "CLOUD-PROVIDER-HYSTRIX-PAYMENT",
+        fallback = PaymentFeignHystrixFallbackServiceImpl.class)
 public interface PaymentFeignHystrixService {
     /**
      * 正常返回
