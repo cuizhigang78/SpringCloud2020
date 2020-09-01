@@ -1,4 +1,0 @@
-com\atguigu\springcloud\controller\OrderController.class
-com\atguigu\springcloud\OrderFeignMain80.class
-com\atguigu\springcloud\config\ApplicationContextConfig.class
-com\atguigu\springcloud\service\PaymentFeignService.class
