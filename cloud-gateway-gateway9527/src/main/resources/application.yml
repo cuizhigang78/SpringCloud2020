@@ -26,6 +26,7 @@ spring:
             # - Before=2017-01-20T17:42:47.789-07:00[America/Denver]
             # - Between=2017-01-20T17:42:47.789-07:00[America/Denver], 2017-01-21T17:42:47.789-07:00[America/Denver]
             # - Cookie=username, zzyy # Cookie=chocolate, ch.p cookie name + 正则表达式
+            #- Header=X-Request-Id, \d+
 eureka:
   instance:
     # eureka服务端的实例名称

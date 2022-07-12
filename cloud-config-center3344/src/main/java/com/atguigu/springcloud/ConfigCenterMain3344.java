@@ -7,6 +7,9 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * create by 携山超 on 2020/6/2
+ *
+ * SpringCloud Config 为微服务架构中的微服务提供集中化的外部配置支持，配置服务器为各个不同微服务应用的所有环境提供
+ * 了一个中心化的外部配置。
  */
 @SpringBootApplication
 @EnableConfigServer
