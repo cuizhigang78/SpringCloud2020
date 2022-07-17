@@ -34,6 +34,7 @@
         <module>cloud-stream-rabbitmq-consumer8803</module>
 		<module>cloud-providerconsul-payment8006</module>
 		<module>cloud-consumerconsul-order80</module>
+		<module>cloud-config-client3366</module>
 	</modules>
 
 	<!-- 统一管理jar包版本 -->
